@@ -16,10 +16,9 @@
         <v-btn tile>B</v-btn>
       </div>
       <v-card-text >
-        <v-textarea
-          
-          v-html="text"
-        ></v-textarea>
+        <div contenteditable="true" >
+          This text can be edited by the user. <h1>Paragraph changed!</h1><p>To je to!</p>
+        </div>
       </v-card-text>
     </v-card>
     
@@ -34,6 +33,9 @@
       text: "<h1>Paragraph changed!</h1><p>To je to!</p>"
     }),
     methods: {
+      transform (type) {
+        console.log(type)
+      },
       
     }
     
